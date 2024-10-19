@@ -17,7 +17,10 @@ public class Enemy : MonoBehaviour
     public float attackRate = 1.0f;
     private float nextAttackTime = 0f;
 
-    //private PlayerMovement playerHealth;
+    public int enemyHealth = 3;
+    public int currentHealth;
+
+    private PlayerMovement playerHealth;
 
 
     void Start()
@@ -26,7 +29,9 @@ public class Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
         currentPoint = pointB.transform;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        //playerHealth = player.GetComponent<PlayerMovement>();
+        playerHealth = player.GetComponent<PlayerMovement>();
+
+        currentHealth = enemyHealth;
     }
     void Update()
     {
@@ -84,16 +89,32 @@ public class Enemy : MonoBehaviour
 
         rb.velocity = Vector2.zero;
 
-        //if (Time.time >= nextAttackTime)
-        //{
+        if (Time.time >= nextAttackTime)
+        {
             
-          //  if (playerHealth != null)
-         //   {
-          //      playerHealth.PerderVida(attackDamage);
-          //  }
+            if (playerHealth != null)
+            {
+                playerHealth.PerderVida(attackDamage);
+            }
 
-         //   nextAttackTime = Time.time + 1f / attackRate;
-       // }
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        Debug.Log("Enemy health: " + currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
     }
 
 }

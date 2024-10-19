@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
+    public Collectible collectible;
+    private bool liberar = false; 
 
     void Start()
     {
@@ -85,12 +88,44 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Agua"))
         {
-            PerderVida();
+            PerderVida(1);
             transform.position = spawnpoint.transform.position;
+        }
+        if (collision.gameObject.CompareTag("Collectible"))
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("pegiu");
+            collectible.count++;
         }
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Collectible"))
+        {
+            Destroy(other.gameObject);
+            collectible.count++;
+        }
+
+        if (other.gameObject.CompareTag("Amigo"))
+        {
+            if(collectible.count >= 1)
+            {
+                collectible.count--;
+                Destroy(other.gameObject);
+                liberar = true;
+                Destroy(other.gameObject);
+
+            }
+            
+        }
+
+        if (other.gameObject.CompareTag("Portal") && liberar)
+        {
+            SceneManager.LoadScene("NextScene");
+        }
+    }
+
     IEnumerator Attack()
     {
         isAttacking = true;
@@ -99,8 +134,18 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(attackCooldown);
     }
 
-    void PerderVida()
+    public void PerderVida(int damage)
     {
-        vida--;
+        vida -= damage;
+        if (vida <= 0)
+        {
+            vida = 0;
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        transform.position = spawnpoint.transform.position;
     }
 }

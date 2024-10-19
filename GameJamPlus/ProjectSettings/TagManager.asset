@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Chao
+  - Enemy
+  - Agua
+  - Collectible
+  - Collectable
+  - Amigo
+  - Portal
   layers:
   - Default
   - TransparentFX

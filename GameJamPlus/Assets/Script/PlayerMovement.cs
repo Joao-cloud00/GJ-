@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class PlayerMovement : MonoBehaviour
     public bool isAttacking = false;
     public float attackCooldown = 0.5f;
     private float attackTimer = 0;
+
+    public int vida = 3;
+
+    [SerializeField]
+    private GameObject spawnpoint;
+    [SerializeField]
+    private Text spawnText;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -25,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+
+        spawnText.text = "Vida : " + vida;
 
         //animação de movimento
         if (moveInput != 0)
@@ -73,6 +83,11 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
             animator.ResetTrigger("Jump");
         }
+        if (collision.gameObject.CompareTag("Agua"))
+        {
+            PerderVida();
+            transform.position = spawnpoint.transform.position;
+        }
     }
 
     
@@ -82,5 +97,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger("Attack");
         //lógica para causar dano aos inimigos
         yield return new WaitForSeconds(attackCooldown);
+    }
+
+    void PerderVida()
+    {
+        vida--;
     }
 }

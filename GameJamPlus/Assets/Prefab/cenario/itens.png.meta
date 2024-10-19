@@ -1,25 +1,7 @@
 fileFormatVersion: 2
-guid: 4099f676255555240b5240f897805dce
+guid: 71b50bd656ef2dc42b33020a281e5026
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -9101230857065804138
-    second: Double Jump (32x32)_0
-  - first:
-      213: -6204479477933590408
-    second: Double Jump (32x32)_1
-  - first:
-      213: 7040038629683462113
-    second: Double Jump (32x32)_2
-  - first:
-      213: 781615245368611544
-    second: Double Jump (32x32)_3
-  - first:
-      213: -3939753913355333839
-    second: Double Jump (32x32)_4
-  - first:
-      213: 6301718139250434432
-    second: Double Jump (32x32)_5
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -66,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,20 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -128,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Double Jump (32x32)_0
+      name: itens_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 32
+        y: 74
+        width: 16
+        height: 4
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 186a1066cebb26a4080b1dee4987e1ef
-      internalID: -9101230857065804138
+      spriteID: fcab0c39dd4d1664eaceb216306a41b9
+      internalID: -2095416117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Double Jump (32x32)_1
+      name: itens_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 16
+        y: 68
+        width: 16
+        height: 4
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14ca7b2721c7ddb45aaa8b4c08b77336
-      internalID: -6204479477933590408
+      spriteID: 2c20e3399046b1f4f85440e8371a7ed5
+      internalID: -1974325205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Double Jump (32x32)_2
+      name: itens_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 7
+        y: 25
+        width: 18
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37a1d8e673892e049bdc53e93eef5630
-      internalID: 7040038629683462113
+      spriteID: 49875917e55ed31438fc9952ad62f2f0
+      internalID: -785660153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Double Jump (32x32)_3
+      name: itens_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 40
+        y: 25
+        width: 18
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b2768d00d49a5346b5d6274c943f0ec
-      internalID: 781615245368611544
+      spriteID: 549133ee379583c48ae3e5d7571dc1c2
+      internalID: 999901071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Double Jump (32x32)_4
+      name: itens_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
+        x: 71
+        y: 25
+        width: 18
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,29 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f09e13b1f198094589cb06cde993cb3
-      internalID: -3939753913355333839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Double Jump (32x32)_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f356363b0b3c3e4ab8639f2baf65603
-      internalID: 6301718139250434432
+      spriteID: 121dd38ea141b8e4bace766d33e3cbff
+      internalID: -337214893
       vertices: []
       indices: 
       edges: []
@@ -264,12 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Double Jump (32x32)_0: -9101230857065804138
-      Double Jump (32x32)_1: -6204479477933590408
-      Double Jump (32x32)_2: 7040038629683462113
-      Double Jump (32x32)_3: 781615245368611544
-      Double Jump (32x32)_4: -3939753913355333839
-      Double Jump (32x32)_5: 6301718139250434432
+      itens_0: -2095416117
+      itens_1: -1974325205
+      itens_2: -785660153
+      itens_3: 999901071
+      itens_4: -337214893
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

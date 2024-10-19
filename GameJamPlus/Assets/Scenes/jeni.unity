@@ -1306,6 +1306,7 @@ MonoBehaviour:
   spawnpoint: {fileID: 1379408339}
   spawnText: {fileID: 1199767141}
   collectible: {fileID: 1761159094}
+  enemy: {fileID: 104740062}
 --- !u!1 &1761159093
 GameObject:
   m_ObjectHideFlags: 0

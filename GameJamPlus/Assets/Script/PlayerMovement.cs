@@ -24,7 +24,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     public Collectible collectible;
-    private bool liberar = false; 
+    private bool liberar = false;
+
+    public Enemy enemy;
 
     void Start()
     {
@@ -130,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isAttacking = true;
         animator.SetTrigger("Attack");
-        //lógica para causar dano aos inimigos
+        enemy.enemyHealth--;
         yield return new WaitForSeconds(attackCooldown);
     }
 

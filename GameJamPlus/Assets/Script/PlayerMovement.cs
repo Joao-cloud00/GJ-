@@ -58,11 +58,13 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isGrounded = false;
             animator.SetTrigger("Jump");
+            AudioManager.Instance.PlaySFX("jump");
         }
 
         if (Input.GetKeyDown(KeyCode.E) && !isAttacking)
         {
             StartCoroutine(Attack());
+            AudioManager.Instance.PlaySFX("attack");
         }
 
         //cooldown de ataque
@@ -89,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Agua"))
         {
             PerderVida(1);
+            AudioManager.Instance.PlaySFX("death");
             transform.position = spawnpoint.transform.position;
         }
         if (collision.gameObject.CompareTag("Collectible"))

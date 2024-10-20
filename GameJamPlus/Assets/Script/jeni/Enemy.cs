@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     public float speed;
     private Transform player;
 
-    public float attackRange;
+    public float attackRange = 0.8f;
     public int enemyHealth = 1;
 
     private PlayerMovement playerHealth;
@@ -98,11 +98,5 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-    void Die()
-    {
-        Destroy(gameObject);
-    }
-
 
 }

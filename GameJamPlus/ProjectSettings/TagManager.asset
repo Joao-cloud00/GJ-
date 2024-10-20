@@ -12,6 +12,7 @@ TagManager:
   - Amigo
   - Portal
   - playerAttack
+  - Placa
   layers:
   - Default
   - TransparentFX

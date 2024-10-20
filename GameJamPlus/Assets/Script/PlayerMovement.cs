@@ -31,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject placaText;
     public Sprite gradeQuebrada;
 
+    public Image[] coracoes; 
+    public Sprite coracaoVazio;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -172,6 +175,7 @@ public class PlayerMovement : MonoBehaviour
     public void PerderVida()
     {
         vida--;
+        AtualizarVida();
         transform.position = spawnpoint.transform.position;
         //vida -= damage;
         //if (vida <= 0)
@@ -179,6 +183,21 @@ public class PlayerMovement : MonoBehaviour
         //   vida = 0;
         //  Die();
         //  }
+    }
+
+    void AtualizarVida()
+    {
+        for (int i = 0; i < coracoes.Length; i++)
+        {
+            if (i < vida)
+            {
+                coracoes[i].enabled = true;
+            }
+            else
+            {
+                coracoes[i].sprite = coracaoVazio;
+            }
+        }
     }
 
     void Die()

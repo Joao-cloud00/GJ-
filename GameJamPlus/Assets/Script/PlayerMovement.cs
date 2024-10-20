@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject spawnpoint;
     [SerializeField]
-    private Text spawnText;
+    private TextMeshProUGUI spawnText;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -117,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("Amigo"))
         {
-            if(collectible.count >= 1)
+            if(collectible.count >= 3)
             {
                 collectible.count--;
                 Destroy(other.gameObject);

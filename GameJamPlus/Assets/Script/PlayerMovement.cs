@@ -29,18 +29,26 @@ public class PlayerMovement : MonoBehaviour
 
     public Enemy enemy;
     public GameObject attackHitbox;
+    public GameObject placaText;
+    public Sprite gradeQuebrada;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         attackHitbox.SetActive(false);
+        placaText.SetActive(false);
     }
 
     void Update()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+
+        if(vida == 0)
+        {
+            SceneManager.LoadScene(0);
+        }
 
         spawnText.text = "Vida : " + vida;
 
@@ -116,14 +124,27 @@ public class PlayerMovement : MonoBehaviour
             collectible.count++;
         }
 
+        if (other.gameObject.CompareTag("Placa"))
+        {
+            placaText.SetActive(true);
+            collectible.count++;
+        }
+        
+
         if (other.gameObject.CompareTag("Amigo"))
         {
             if(collectible.count >= 3)
             {
                 collectible.count--;
-                Destroy(other.gameObject);
                 liberar = true;
-                Destroy(other.gameObject);
+
+                SpriteRenderer spriteRenderer = other.gameObject.GetComponent<SpriteRenderer>();
+
+                if (spriteRenderer != null && gradeQuebrada != null)
+                {
+                    spriteRenderer.sprite = gradeQuebrada;
+                }
+                
 
             }
             

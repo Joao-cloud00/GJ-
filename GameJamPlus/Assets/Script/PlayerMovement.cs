@@ -31,12 +31,18 @@ public class PlayerMovement : MonoBehaviour
     public GameObject placaText;
     public Sprite gradeQuebrada;
 
+    public Image[] coracoes; 
+    public Sprite coracaoVazio;
+    public Slider slider;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         attackHitbox.SetActive(false);
         placaText.SetActive(false);
+        slider.maxValue = 3;
+        slider.value = 0;
     }
 
     void Update()
@@ -44,7 +50,9 @@ public class PlayerMovement : MonoBehaviour
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-        if(vida == 0)
+        slider.value = collectible.count;
+
+        if (vida == 0)
         {
             SceneManager.LoadScene(0);
         }
@@ -120,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             collectible.count++;
+            slider.value = collectible.count;
         }
 
         if (other.gameObject.CompareTag("Placa"))
@@ -172,6 +181,7 @@ public class PlayerMovement : MonoBehaviour
     public void PerderVida()
     {
         vida--;
+        AtualizarVidaUI();
         transform.position = spawnpoint.transform.position;
         //vida -= damage;
         //if (vida <= 0)
@@ -185,4 +195,21 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.position = spawnpoint.transform.position;
     }
+
+    void AtualizarVidaUI()
+    {
+        for (int i = 0; i < coracoes.Length; i++)
+        {
+            if (i < vida)
+            {
+                coracoes[i].enabled = true;
+            }
+            else
+            {
+                coracoes[i].sprite = coracaoVazio;
+            }
+        }
+    }
+
+
 }

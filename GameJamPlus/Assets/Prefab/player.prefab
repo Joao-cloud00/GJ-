@@ -172,7 +172,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -197,9 +197,12 @@ MonoBehaviour:
   jumpForce: 3
   isGrounded: 0
   isAttacking: 0
-  attackCooldown: 1
+  attackCooldown: 0.3
   vida: 3
   spawnpoint: {fileID: 0}
   spawnText: {fileID: 0}
   collectible: {fileID: 0}
   enemy: {fileID: 0}
+  attackHitbox: {fileID: 0}
+  placaText: {fileID: 0}
+  gradeQuebrada: {fileID: 0}

@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
 
     public bool isAttacking = false;
-    public float attackCooldown = 0.5f;
+    public float attackCooldown = 0.2f;
     private float attackTimer = 0;
 
     public int vida = 3;
@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     public Collectible collectible;
     private bool liberar = false;
 
-    public Enemy enemy;
     public GameObject attackHitbox;
     public GameObject placaText;
     public Sprite gradeQuebrada;
@@ -111,7 +110,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectible"))
         {
             Destroy(collision.gameObject);
-            Debug.Log("pegiu");
             collectible.count++;
         }
     }

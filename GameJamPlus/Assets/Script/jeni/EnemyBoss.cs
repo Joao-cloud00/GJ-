@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyBoss : MonoBehaviour
 {
     public GameObject pointA;
     public GameObject pointB;
@@ -12,7 +12,8 @@ public class Enemy : MonoBehaviour
     private Transform player;
 
     public float attackRange = 0.8f;
-    public int enemyHealth = 1;
+    public int enemyHealth = 3;
+    public int currentHealth;
 
     private PlayerMovement playerHealth;
 
@@ -23,7 +24,7 @@ public class Enemy : MonoBehaviour
         currentPoint = pointB.transform;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerHealth = player.GetComponent<PlayerMovement>();
-
+        currentHealth = enemyHealth;
     }
     void Update()
     {
@@ -52,7 +53,7 @@ public class Enemy : MonoBehaviour
             rb.velocity = new Vector2(-speed, 0);
         }
 
-        if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
+        if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
         {
             Flip();
             currentPoint = pointA.transform;
@@ -89,7 +90,12 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage()
     {
-        Destroy(gameObject);
-    }
+        enemyHealth -= 1;
 
+        if (enemyHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+    }
 }

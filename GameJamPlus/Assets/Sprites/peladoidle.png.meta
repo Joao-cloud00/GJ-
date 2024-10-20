@@ -100,10 +100,10 @@ TextureImporter:
       name: peladoidle_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 11
-        width: 39
-        height: 102
+        x: 36
+        y: 10
+        width: 41
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2fbb7e8c0276a846ad3a8da6e86954e
-      internalID: -940482248
+      spriteID: 55b3a28f479506442ba2e5b1e4d4d695
+      internalID: 1400793593
       vertices: []
       indices: 
       edges: []
@@ -121,10 +121,10 @@ TextureImporter:
       name: peladoidle_1
       rect:
         serializedVersion: 2
-        x: 164
-        y: 11
-        width: 40
-        height: 99
+        x: 163
+        y: 10
+        width: 42
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05d67741925c0714fb2d45ca2106c88d
-      internalID: -937987072
+      spriteID: 4b0de42c2406129468d511f7eec3f2de
+      internalID: 1304896614
       vertices: []
       indices: 
       edges: []
@@ -149,8 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      peladoidle_0: -940482248
-      peladoidle_1: -937987072
+      peladoidle_0: 1400793593
+      peladoidle_1: 1304896614
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

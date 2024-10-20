@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public Sprite coracaoVazio;
     public Slider slider;
 
+    private float maxGroundAngle = 45f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -106,8 +107,18 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Chao"))
         {
-            isGrounded = true;
-            animator.ResetTrigger("Jump");
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                // Verifica o ângulo da superfície de contato
+                float angle = Vector2.Angle(contact.normal, Vector2.up);
+
+                // Se o ângulo for menor que o ângulo máximo do chão, permite pular
+                if (angle < maxGroundAngle)
+                {
+                    isGrounded = true;
+                    animator.ResetTrigger("Jump");
+                }
+            }
         }
         if (collision.gameObject.CompareTag("Agua"))
         {
@@ -119,6 +130,14 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(collision.gameObject);
             collectible.count++;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Chao"))
+        {
+            isGrounded = false;
         }
     }
 

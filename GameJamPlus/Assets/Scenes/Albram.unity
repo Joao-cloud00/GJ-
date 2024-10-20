@@ -200,6 +200,136 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.97331, y: 0.25112057}
   m_EdgeRadius: 0
+--- !u!1 &15563800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 15563801}
+  - component: {fileID: 15563803}
+  - component: {fileID: 15563802}
+  m_Layer: 0
+  m_Name: ataque
+  m_TagString: playerAttack
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &15563801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15563800}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.75, y: -0.25, z: -2.7811}
+  m_LocalScale: {x: 0.7709394, y: 0.7709394, z: 0.7709394}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351199286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!212 &15563802
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15563800}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 633adfdb111dfe6488770958209c697f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &15563803
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15563800}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.07719752, y: -0.1427384}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.96}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.48544174, y: 1.2138809}
+  m_EdgeRadius: 0
 --- !u!1 &19850701
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,10 +403,7 @@ MonoBehaviour:
   pointB: {fileID: 355202334}
   speed: 3
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &19850705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -585,10 +712,7 @@ MonoBehaviour:
   pointB: {fileID: 341501673}
   speed: 0.5
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &77058424
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -757,6 +881,10 @@ PrefabInstance:
       propertyPath: collectible
       value: 
       objectReference: {fileID: 1790839277}
+    - target: {fileID: 1690817918842991710, guid: 98d29eb56d534564fa79cee09840ebfc, type: 3}
+      propertyPath: attackHitbox
+      value: 
+      objectReference: {fileID: 15563800}
     - target: {fileID: 6833318900341162839, guid: 98d29eb56d534564fa79cee09840ebfc, type: 3}
       propertyPath: m_Size.x
       value: 0.61958885
@@ -815,7 +943,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8765641002857699981, guid: 98d29eb56d534564fa79cee09840ebfc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 15563801}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98d29eb56d534564fa79cee09840ebfc, type: 3}
 --- !u!1 &94368072
@@ -891,10 +1022,7 @@ MonoBehaviour:
   pointB: {fileID: 1451083166}
   speed: 3
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &94368076
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1684,10 +1812,7 @@ MonoBehaviour:
   pointB: {fileID: 582247872}
   speed: 4
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &258387306
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2150,10 +2275,7 @@ MonoBehaviour:
   pointB: {fileID: 1871671497}
   speed: 3.5
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &320327216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2418,10 +2540,7 @@ MonoBehaviour:
   pointB: {fileID: 874655048}
   speed: 1.5
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &357960258
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2696,10 +2815,7 @@ MonoBehaviour:
   pointB: {fileID: 1548509814}
   speed: 1.5
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &401151048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3727,12 +3843,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 1015645849}
   pointB: {fileID: 1247885503}
-  speed: 2
-  attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
-  enemyHealth: 3
-  currentHealth: 0
+  speed: 0.5
+  attackRange: 0.5
+  enemyHealth: 1
 --- !u!61 &561532893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4273,10 +4386,7 @@ MonoBehaviour:
   pointB: {fileID: 721596419}
   speed: 0.8
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &771433494
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6048,10 +6158,7 @@ MonoBehaviour:
   pointB: {fileID: 933529830}
   speed: 1
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &1145019997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6521,10 +6628,7 @@ MonoBehaviour:
   pointB: {fileID: 571947698}
   speed: 3
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &1249711925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7527,10 +7631,7 @@ MonoBehaviour:
   pointB: {fileID: 1061496148}
   speed: 1.5
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &1399051616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7728,10 +7829,7 @@ MonoBehaviour:
   pointB: {fileID: 797567584}
   speed: 1
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &1412014552
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15587,10 +15685,7 @@ MonoBehaviour:
   pointB: {fileID: 792490848}
   speed: 1
   attackRange: 0.25
-  attackDamage: 10
-  attackRate: 1
   enemyHealth: 3
-  currentHealth: 0
 --- !u!61 &1972668515
 BoxCollider2D:
   m_ObjectHideFlags: 0

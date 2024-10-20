@@ -27,11 +27,13 @@ public class PlayerMovement : MonoBehaviour
     private bool liberar = false;
 
     public Enemy enemy;
+    public GameObject attackHitbox;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        attackHitbox.SetActive(false);
     }
 
     void Update()
@@ -77,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 isAttacking = false;
                 attackTimer = 0;
+                attackHitbox.SetActive(false);
                 animator.ResetTrigger("Attack");
             }
         }
@@ -92,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Agua"))
         {
-            PerderVida(1);
+            PerderVida();
             AudioManager.Instance.PlaySFX("death");
             transform.position = spawnpoint.transform.position;
         }
@@ -134,19 +137,21 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Attack()
     {
         isAttacking = true;
+        attackHitbox.SetActive(true);
         animator.SetTrigger("Attack");
-        enemy.enemyHealth--;
         yield return new WaitForSeconds(attackCooldown);
     }
 
-    public void PerderVida(int damage)
+    public void PerderVida()
     {
-        vida -= damage;
-        if (vida <= 0)
-        {
-            vida = 0;
-            Die();
-        }
+        vida--;
+        transform.position = spawnpoint.transform.position;
+        //vida -= damage;
+        //if (vida <= 0)
+        //{
+        //   vida = 0;
+        //  Die();
+        //  }
     }
 
     void Die()

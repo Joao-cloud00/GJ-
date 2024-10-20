@@ -11,6 +11,7 @@ TagManager:
   - Collectable
   - Amigo
   - Portal
+  - playerAttack
   layers:
   - Default
   - TransparentFX

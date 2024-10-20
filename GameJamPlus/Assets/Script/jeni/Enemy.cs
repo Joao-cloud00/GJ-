@@ -13,12 +13,7 @@ public class Enemy : MonoBehaviour
     private Transform player;
 
     public float attackRange;
-    public int attackDamage = 10;  
-    public float attackRate = 1.0f;
-    private float nextAttackTime = 0f;
-
-    public int enemyHealth = 3;
-    public int currentHealth;
+    public int enemyHealth = 1;
 
     private PlayerMovement playerHealth;
 
@@ -31,7 +26,6 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerHealth = player.GetComponent<PlayerMovement>();
 
-        currentHealth = enemyHealth;
     }
     void Update()
     {
@@ -82,39 +76,33 @@ public class Enemy : MonoBehaviour
         transform.localScale = localScale;
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("playerAttack"))
+        {
+            TakeDamage();
+        }
+    }
+
     void Attack()
     {
         animator.SetBool("Attacking", true);
         animator.SetBool("Patrolling", false);
 
         rb.velocity = Vector2.zero;
+        playerHealth.PerderVida();
 
-        if (Time.time >= nextAttackTime)
-        {
-            
-            if (playerHealth != null)
-            {
-                playerHealth.PerderVida(attackDamage);
-            }
-
-            nextAttackTime = Time.time + 1f / attackRate;
-        }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage()
     {
-        currentHealth -= damage;
-        Debug.Log("Enemy health: " + currentHealth);
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+        Destroy(gameObject);
     }
 
     void Die()
     {
         Destroy(gameObject);
     }
+
 
 }

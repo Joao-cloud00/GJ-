@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c354baacbd1d8a046aeff4d8d0662b59
+guid: 2ad0eb4b234439043b88280f54def362
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,34 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: inimigo_0
+      name: inimigo 1_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 8
-        width: 37
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33a6ba0d2a59a2f4c9f060261e98297e
-      internalID: 1340982568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: inimigo_1
-      rect:
-        serializedVersion: 2
-        x: 174
-        y: 9
+        x: 45
+        y: 7
         width: 39
-        height: 102
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,83 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d827d27774a6ba4c8b1a75c9c83cf24
-      internalID: 1458379542
+      spriteID: 1f7553cf2f40c174da64009acbb85f7c
+      internalID: -1166547734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inimigo_2
+      name: inimigo 1_1
       rect:
         serializedVersion: 2
-        x: 299
-        y: 9
-        width: 44
-        height: 103
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2882cf76a15eae644b108872ff32c2f5
-      internalID: -1104733093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: inimigo_3
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 9
-        width: 58
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2509936a61b3d2c428e7f072fa66df99
-      internalID: -241931879
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: inimigo_4
-      rect:
-        serializedVersion: 2
-        x: 552
-        y: 9
-        width: 49
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5fbe76e41b2ab0149ad121547b2c7f65
-      internalID: -873249310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: inimigo_5
-      rect:
-        serializedVersion: 2
-        x: 685
+        x: 173
         y: 8
         width: 41
-        height: 102
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,19 +132,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35b3a737f9ac7cc479135717cdfff3c5
-      internalID: 885015375
+      spriteID: 6660425ffb41798469dd4bb870a22bf5
+      internalID: 213483336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inimigo_6
+      name: inimigo 1_2
       rect:
         serializedVersion: 2
-        x: 814
+        x: 298
         y: 8
-        width: 37
+        width: 46
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20759db6e157d174fa70bf6f36dc52e3
+      internalID: -626251972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo 1_3
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 8
+        width: 60
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -237,8 +174,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccb3ed644ca15ad43bbe5902179e3a94
-      internalID: -61767298
+      spriteID: 66ac73e47a1ea164291ba4c27c74da16
+      internalID: -416239108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo 1_4
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 8
+        width: 51
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a48565bd356f747a832f82955c2183
+      internalID: -841857284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo 1_5
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 7
+        width: 43
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af86cd41a1d5e2d419940b7addde29e0
+      internalID: 268662808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inimigo 1_6
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 7
+        width: 39
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bddeaa9ebb71514f945a27b7e007679
+      internalID: -2112729615
       vertices: []
       indices: 
       edges: []
@@ -254,13 +254,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      inimigo_0: 1340982568
-      inimigo_1: 1458379542
-      inimigo_2: -1104733093
-      inimigo_3: -241931879
-      inimigo_4: -873249310
-      inimigo_5: 885015375
-      inimigo_6: -61767298
+      inimigo 1_0: -1166547734
+      inimigo 1_1: 213483336
+      inimigo 1_2: -626251972
+      inimigo 1_3: -416239108
+      inimigo 1_4: -841857284
+      inimigo 1_5: 268662808
+      inimigo 1_6: -2112729615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

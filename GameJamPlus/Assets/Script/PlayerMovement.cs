@@ -125,7 +125,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Placa"))
         {
             placaText.SetActive(true);
-            collectible.count++;
         }
         
 
@@ -151,6 +150,14 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Portal") && liberar)
         {
             SceneManager.LoadScene("NextScene");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Placa"))
+        {
+            placaText.SetActive(false);
         }
     }
 

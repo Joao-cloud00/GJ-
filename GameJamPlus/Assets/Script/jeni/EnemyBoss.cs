@@ -16,6 +16,7 @@ public class EnemyBoss : MonoBehaviour
     public int currentHealth;
 
     private PlayerMovement playerHealth;
+    private Animator animator;
 
 
     void Start()
@@ -25,6 +26,8 @@ public class EnemyBoss : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerHealth = player.GetComponent<PlayerMovement>();
         currentHealth = enemyHealth;
+
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -42,6 +45,7 @@ public class EnemyBoss : MonoBehaviour
 
     void Patrol()
     {
+        animator.SetBool("isWalking", true);
         Vector2 point = currentPoint.position - transform.position;
 
         if (currentPoint == pointB.transform)
@@ -91,6 +95,10 @@ public class EnemyBoss : MonoBehaviour
     public void TakeDamage()
     {
         enemyHealth -= 1;
+
+        animator.SetTrigger("isTakingDamage");
+
+        animator.SetBool("isWalking", true);
 
         if (enemyHealth <= 0)
         {

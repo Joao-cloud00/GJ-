@@ -4944,7 +4944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
       propertyPath: sfxSounds.Array.size
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
       propertyPath: sfxSounds.Array.data[0].clip
@@ -4985,6 +4985,30 @@ PrefabInstance:
     - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
       propertyPath: sfxSounds.Array.data[6].name
       value: andar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: eda3f6f19c6b8f04b8e551811ea6c942, type: 3}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[7].name
+      value: platafomra
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c7ce0f2b7ffac940a1aedb5f674022f, type: 3}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[8].name
+      value: cifra
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: aeaf37459820e7a4386861f3c79199a5, type: 3}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[9].name
+      value: nota
       objectReference: {fileID: 0}
     - target: {fileID: 5683615548696423624, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
       propertyPath: m_LocalPosition.x

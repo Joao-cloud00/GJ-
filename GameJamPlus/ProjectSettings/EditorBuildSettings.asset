@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Menu.unity
+    guid: e33a393d9cd964842a610def773ebe37
+  - enabled: 1
+    path: Assets/Scenes/Albram.unity
+    guid: 165be96d866a88841a2c104bb08cef15
+  - enabled: 1
+    path: Assets/Scenes/Albram2.unity
+    guid: 50fb757df8cde224eb1de10bebfeaccc
   m_configObjects: {}

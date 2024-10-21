@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
 
     public void ComecarJogo()
     {
-        SceneManager.LoadScene("Fase1");
+        SceneManager.LoadScene(1);
     }
 
     public void AbrirOpcoes()

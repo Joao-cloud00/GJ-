@@ -3794,7 +3794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Aaaaaaaaaaaaaah
+  m_text: Siga em frente
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6059f9afae99d24468102c1a06018fc4, type: 2}
   m_sharedMaterial: {fileID: -2568095598517676306, guid: 6059f9afae99d24468102c1a06018fc4, type: 2}
@@ -14873,7 +14873,7 @@ GameObject:
   - component: {fileID: 1883911520}
   m_Layer: 0
   m_Name: placa (2)
-  m_TagString: Placa3
+  m_TagString: Placa2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

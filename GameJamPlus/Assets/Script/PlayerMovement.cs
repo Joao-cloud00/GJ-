@@ -202,7 +202,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("Portal") && liberar)
         {
-            SceneManager.LoadScene("NextScene");
+            SceneManager.LoadScene(2);
         }
     }
 

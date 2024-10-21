@@ -133,6 +133,25 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Chao"))
+        {
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                // Verifica o ângulo da superfície de contato
+                float angle = Vector2.Angle(contact.normal, Vector2.up);
+
+                // Se o ângulo for menor que o ângulo máximo do chão, permite pular
+                if (angle < maxGroundAngle)
+                {
+                    isGrounded = true;
+                    animator.ResetTrigger("Jump");
+                }
+            }
+        }
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Chao"))

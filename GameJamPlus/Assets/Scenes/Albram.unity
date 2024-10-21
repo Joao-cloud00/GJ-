@@ -1379,7 +1379,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 2042379882}
   m_HandleRect: {fileID: 0}
-  m_Direction: 3
+  m_Direction: 2
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
@@ -15193,7 +15193,7 @@ MonoBehaviour:
   m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &2042379885

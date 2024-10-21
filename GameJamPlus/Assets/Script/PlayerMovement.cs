@@ -185,7 +185,6 @@ public class PlayerMovement : MonoBehaviour
         {
             if(collectible.count >= 3)
             {
-                collectible.count--;
                 liberar = true;
 
                 SpriteRenderer spriteRenderer = other.gameObject.GetComponent<SpriteRenderer>();

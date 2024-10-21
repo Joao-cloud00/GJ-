@@ -171,6 +171,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             collectible.count++;
+            AudioManager.Instance.PlaySFX("item");
             slider.value = collectible.count;
         }
 

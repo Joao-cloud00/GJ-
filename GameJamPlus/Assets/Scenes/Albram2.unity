@@ -2751,6 +2751,10 @@ PrefabInstance:
       propertyPath: speed
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8417130029635558977, guid: 28e78ec2c4220bd45948758d16625341, type: 3}
+      propertyPath: attackRange
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18395,6 +18399,10 @@ PrefabInstance:
     - target: {fileID: 8417130029635558977, guid: 28e78ec2c4220bd45948758d16625341, type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417130029635558977, guid: 28e78ec2c4220bd45948758d16625341, type: 3}
+      propertyPath: attackRange
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8417130029635558977, guid: 28e78ec2c4220bd45948758d16625341, type: 3}
       propertyPath: enemyHealth

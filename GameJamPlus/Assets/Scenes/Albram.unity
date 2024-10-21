@@ -5157,6 +5157,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 884a749f3a79e824b99e9cfb5bb5051b, type: 3}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: adcb131b7d527df43b57660b81b61493, type: 3}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bd40ed6627d0e24ab8413535b3e6b29, type: 3}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[3].name
+      value: item
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e7debac2e04918541b53acfec308a090, type: 3}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[4].name
+      value: inimigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 878ea55540b48d64aaa37dcfb5f81159, type: 3}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[5].name
+      value: jogador
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 762ef5d8d23af9a4a942e6f0341e82a3, type: 3}
+    - target: {fileID: 4345048708815873812, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
+      propertyPath: sfxSounds.Array.data[6].name
+      value: andar
+      objectReference: {fileID: 0}
     - target: {fileID: 5683615548696423624, guid: e5dccf5f261ba3d45a4ae1b398e9bb15, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.1058273

@@ -34,8 +34,12 @@ public class PlayerMovement : MonoBehaviour
     public Image[] coracoes; 
     public Sprite coracaoVazio;
     public Slider slider;
+    private float groundCheckCooldown = 0.1f;
+    private float lastJumpTime = 0f;
 
-    private float maxGroundAngle = 45f;
+
+    private float maxGroundAngle = 30f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -79,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isGrounded = false;
             animator.SetTrigger("Jump");
+            lastJumpTime = Time.time;
             AudioManager.Instance.PlaySFX("jump");
         }
 
@@ -113,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
                 float angle = Vector2.Angle(contact.normal, Vector2.up);
 
                 // Se o ângulo for menor que o ângulo máximo do chão, permite pular
-                if (angle < maxGroundAngle)
+                if (angle < maxGroundAngle && rb.velocity.y <= 0)
                 {
                     isGrounded = true;
                     animator.ResetTrigger("Jump");
@@ -143,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
                 float angle = Vector2.Angle(contact.normal, Vector2.up);
 
                 // Se o ângulo for menor que o ângulo máximo do chão, permite pular
-                if (angle < maxGroundAngle)
+                if (angle < maxGroundAngle && rb.velocity.y <= 0 && Time.time > lastJumpTime + groundCheckCooldown)
                 {
                     isGrounded = true;
                     animator.ResetTrigger("Jump");
@@ -197,14 +202,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Portal") && liberar)
         {
             SceneManager.LoadScene("NextScene");
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Placa"))
-        {
-            placaText.SetActive(false);
         }
     }
 

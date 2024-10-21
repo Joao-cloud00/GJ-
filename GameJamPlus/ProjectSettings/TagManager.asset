@@ -13,6 +13,10 @@ TagManager:
   - Portal
   - playerAttack
   - Placa
+  - Placa1
+  - Placa2
+  - Placa3
+  - Placa4
   layers:
   - Default
   - TransparentFX
